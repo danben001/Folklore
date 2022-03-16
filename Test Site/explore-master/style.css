@@ -54,3 +54,16 @@ nav{
   padding: 2rem 20rem;
   font-size: 1.1rem;
 }
+
+.button{
+  padding: 2rem 5rem;
+  font-size: 1.9rem;
+}
+
+.recent{
+  position: absolute;
+  top:20%;
+  left:50%;
+  font-size: 2rem;
+  transform: translate(-50%, -30%);
+}
