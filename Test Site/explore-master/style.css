@@ -6,12 +6,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: rgb(24,24,24);
+}
+
 nav{
-  position:absolute;
   width: 100%;
   display: flex;
   padding: 3rem 10rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .container{
@@ -54,7 +58,7 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 60vh;
+  min-height: 10vh;
   text-align: center;
 }
 
@@ -64,29 +68,109 @@ nav{
 }
 
 .comicText{
-  position: absolute;
-  top:25%;
-  left:50%;
+align-items: center;
   font-size: 1.1rem;
-  transform: translate(-50%, -30%);
 }
 
 .button{
-  padding: 2rem 5rem;
+  padding: 3rem 5rem;
   font-size: 1.9rem;
 }
 
-.recent{
-  position: absolute;
-  top:20%;
-  left:50%;
+.secondary-header{
+  text-align: center;
+  padding: 2rem 1rem;
   font-size: 2rem;
-  transform: translate(-50%, -30%);
+  transform: translate(0%, -70%);
 }
 
 .comic{
-  position: absolute;
-  top:45%;
-  left:50%;
-  transform: translate(-50%, -30%);
+  align-items: center;
+}
+
+.container{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding:20px;
+}
+
+.container form{
+  width: 250%;
+  height:50%;
+  flex-direction: row;
+}
+
+.container form input{
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  padding: 8px 10px;
+  color: black;
+}
+
+.container form i{
+  padding-left: 10px;
+
+}
+
+.comic-list{
+  padding: 20px 10px;
+}
+
+.comicSearch{
+padding: 5rem;
+}
+
+.comicSearch img{
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transform: translate(-120%);
+  padding: 3rem 1rem;
+}
+
+
+.comicSearch .c-details h2{
+  font-size:20px
+
+}
+
+.comicSearch .c-details{
+  padding: 60px 80px;
+}
+
+
+.category-container {
+  padding: 50px;
+}
+
+.box {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.box a {
+  transition: transform .3s;
+}
+
+.box a:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.box img {
+  border-radius: 10px;
+  width:100%;
+}
+
+.img-tile{
+
 }
