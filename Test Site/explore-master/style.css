@@ -98,13 +98,13 @@ align-items: center;
 }
 
 .container form{
-  width: 250%;
-  height:50%;
   flex-direction: row;
 }
 
 .container form input{
-  width: 100%;
+  transform: translate(-30%);
+  width: 250%;
+  height:110%;
   font-size: 1.5rem;
   border-radius: 1rem;
   font-weight: 600;
@@ -122,16 +122,18 @@ align-items: center;
 }
 
 .comicSearch{
+  display:flex;
 padding: 5rem;
+cursor:pointer;
 }
 
 .comicSearch img{
   width: 20%;
   height: 20%;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 2rem;
   transform: translate(-120%);
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 
