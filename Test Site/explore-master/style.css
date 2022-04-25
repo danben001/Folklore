@@ -176,3 +176,10 @@ cursor:pointer;
 .img-tile{
 
 }
+
+.category-title{
+  text-align: left;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+
+}
