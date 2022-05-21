@@ -134,6 +134,9 @@ cursor:pointer;
   border-radius: 2rem;
   transform: translate(-120%);
   padding: 2rem 1rem;
+  min-width: 500px;
+  max-width: 500px
+
 }
 
 
