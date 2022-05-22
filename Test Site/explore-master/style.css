@@ -17,6 +17,7 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
+a:link { text-decoration: none; }
 
 .container{
   height: 100vh;
@@ -30,12 +31,25 @@ nav{
   z-index: -1;
 }
 
-.main-title{
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+
+}
+
+.main-title-home{
   position: absolute;
   top:30%;
   left:50%;
   font-size: 6rem;
   transform: translate(-50%, -30%);
+}
+
+.main-title{
+
+  font-size: 4rem;
+
 }
 
 .scroll-down{
@@ -83,8 +97,8 @@ align-items: center;
 
 .secondary-header{
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 2rem;
+  padding: 1rem 1rem;
+  font-size: 4rem;
   transform: translate(0%, -70%);
 }
 
@@ -97,7 +111,6 @@ align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding:20px;
 }
 
@@ -106,53 +119,36 @@ align-items: center;
 }
 
 .container form input{
-  transform: translate(-30%);
-  width: 250%;
-  height:110%;
-  font-size: 1.5rem;
+  transform: translate(-20%);
+  width: 170%;
+  height:100%;
+  font-size: 3rem;
   border-radius: 1rem;
   font-weight: 600;
   padding: 8px 10px;
   color: black;
 }
 
-.container form i{
-  padding-left: 10px;
-
-}
-
-.comic-list{
-  padding: 20px 10px;
-}
 
 .comicSearch{
   display:flex;
-padding: 5rem;
-cursor:pointer;
+  padding: 13rem;
+  cursor:pointer;
 }
 
 .comicSearch img{
-  width: 20%;
-  height: 20%;
+
+  width: 25%;
+  height: 25%;
   object-fit: cover;
   border-radius: 2rem;
-  transform: translate(-120%);
-  padding: 2rem 1rem;
-  min-width: 500px;
-  max-width: 500px
+  transform: translate(-50%, -40%);
+  min-width: 35rem;
+  min-height: 25rem;
+  max-width: 35rem;
+  max-height: 25rem;
 
 }
-
-
-.comicSearch .c-details h2{
-  font-size:20px
-
-}
-
-.comicSearch .c-details{
-  padding: 60px 80px;
-}
-
 
 .category-container {
   padding: 50px;
@@ -190,3 +186,5 @@ cursor:pointer;
   font-size: 2rem;
 
 }
+
+.is-hidden { display: none; }

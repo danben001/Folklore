@@ -1,23 +1,22 @@
-const search = () =>{
-  const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const storeitems = document.getElementById("comic-list")
-  const comic = document.querySelectorAll(".comicSearch")
-  const cname = storeitems.getElementsByTagName("h2")
 
-  for(var i=0; i < cname.length; i++){
-    let match = comic[i].getElementsByTagName('h2')[0];
-
-    if(match){
-      let textvalue = match.textContent || match.innerHTML
-
-      if(textvalue.toUpperCase().indexOf(searchbox) > -1){
-        comic[i].style.display = "";
-      }else{
-        comic[i].style.display = "none";
-      }
+function liveSearch() {
+  // Locate all comic elements
+  let comics = document.querySelectorAll('.comicSearch')
+  // Locate the search bar
+  let search_query = document.getElementById("search-item").value;
+  // Loop through the comics
+  for (var i = 0; i < comics.length; i++) {
+    // If text content exists in the comic element..
+    if(comics[i].textContent.toLowerCase()
+      // ...and the text matches the search query...
+      .includes(search_query.toLowerCase())) {
+        // ...remove the `.is-hidden` class.
+        comics[i].classList.remove("is-hidden");
+    } else {
+      // Otherwise, add the class.
+      comics[i].classList.add("is-hidden");
     }
   }
 }
 
-
-//Referenced From https://youtu.be/ZFUOC-y4i0s
+//Referenced From https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
