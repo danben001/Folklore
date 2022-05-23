@@ -13,11 +13,37 @@ body {
 nav{
   width: 100%;
   display: flex;
+  padding-top: 2rem ;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1200px;
+}
+
+nav a{
+  padding: 3rem 5rem;
+  font-size: 1.9rem;
+}
+
+.front{
+  width: 100%;
+  display: flex;
   padding: 3rem 10rem;
   justify-content: space-between;
   align-items: center;
+  padding-right: 500px;
+  padding-left: 500px;
 }
+
+.front a{
+  padding: 3rem 5rem;
+  font-size: 2.9rem;
+}
+
 a:link { text-decoration: none; }
+
+a:hover {
+  color: green;
+}
 
 .container{
   height: 100vh;
@@ -76,8 +102,15 @@ a:link { text-decoration: none; }
   text-align: center;
 }
 
+.content-front{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
 .thumbnails{
-width: 70%;
+width: 25%;
 }
 
 .text{
@@ -91,8 +124,7 @@ align-items: center;
 }
 
 .button{
-  padding: 3rem 5rem;
-  font-size: 1.9rem;
+
 }
 
 .secondary-header{
@@ -176,15 +208,228 @@ align-items: center;
   width:100%;
 }
 
-.img-tile{
-
-}
-
 .category-title{
   text-align: left;
   padding: 2rem 1rem;
   font-size: 2rem;
-
 }
 
+.search-title{
+  text-align: left;
+  padding: 2rem 1rem;
+  font-size: 3rem;
+}
+
+
 .is-hidden { display: none; }
+
+@media only screen and (max-width: 390px) {
+  nav{
+    width: 100%;
+    display: contents;
+    padding-top: 2rem ;
+
+
+  }
+
+  nav a{
+    padding: 2rem 4rem;
+    font-size: 1rem;
+  }
+
+  .front{
+    display: flex;
+    padding: 3rem;
+    transform: translate(-17%, 0);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .front a{
+    padding: 1rem 3.5rem;
+    font-size: 1.5rem;
+  }
+
+  .secondary-header{
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    transform: translate(0%, -70%);
+  }
+
+  .container img {
+    width: 100%;
+    position: absolute;
+    height: 110vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .container img {
+    width: 100%;
+    position: absolute;
+    height: 110vh;
+
+  }
+
+  .main-title-home{
+    position: absolute;
+    top:30%;
+    left:50%;
+    font-size: 6rem;
+    transform: translate(-50%, -30%);
+  }
+
+  .main-title{
+
+    font-size: 3rem;
+    padding-left: 6rem;
+
+
+  }
+
+  .scroll-down{
+    position: absolute;
+    top:80%;
+    left:50%;
+    font-size: 2rem;
+    transform: translate(-50%, -30%);
+  }
+
+  .content{
+    width: 100%;
+    background: rgb(24,24,24);
+    min-height: 100vh;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .content-images{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    text-align: center;
+  }
+
+  .content-front{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .thumbnails{
+  width: 55%;
+  }
+
+  .text{
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .comicText{
+  align-items: center;
+    font-size: 1.1rem;
+  }
+
+  .button{
+
+  }
+
+  .secondary-header{
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    transform: translate(0%, -70%);
+  }
+
+  .comic{
+    align-items: center;
+  }
+
+  .container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+  }
+
+  .container form{
+    flex-direction: row;
+  }
+
+  .container form input{
+    transform: translate(5%);
+    width: 90%;
+    height:20%;
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    padding: 20px 10px;
+    color: black;
+  }
+
+
+  .comicSearch{
+    display:flex;
+    padding: 6rem;
+    cursor:pointer;
+  }
+
+  .comicSearch img{
+
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transform: translate(-50%, -40%);
+    min-width: 15rem;
+    min-height: 10rem;
+    max-width: 15rem;
+    max-height: 10rem;
+
+  }
+
+  .category-container {
+    padding: 50px;
+  }
+
+  .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    align-items: center;
+  }
+
+  .box a {
+    transition: transform .3s;
+  }
+
+  .box a:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+
+  .box img {
+    border-radius: 10px;
+    width:100%;
+    align-items: center;
+
+  }
+
+  .category-title{
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+  }
+
+  .search-title{
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+}
