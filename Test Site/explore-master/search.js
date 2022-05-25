@@ -10,11 +10,11 @@ function liveSearch() {
   // Loop through the comics
   for (var i = 0; i < comics.length; i++) {
     // If text content exists in the comic element..
-    if(comics[i].textContent.toLowerCase()
+    if (comics[i].textContent.toLowerCase()
       // ...and the text matches the search query...
       .includes(search_query.toLowerCase())) {
-        // ...remove the `.is-hidden` class.
-        comics[i].classList.remove("is-hidden");
+      // ...remove the `.is-hidden` class.
+      comics[i].classList.remove("is-hidden");
     } else {
       // Otherwise, add the class.
       comics[i].classList.add("is-hidden");
