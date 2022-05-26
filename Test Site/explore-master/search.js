@@ -1,6 +1,6 @@
 // Interactive Digital Media
 // Daniel Benhamou – 3011151 – danielb009@hotmail.com
-// Referenced From Hilman Ramadhan https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
+// Referenced From Hilman Ramadhan, published on Oct 26, 2021 https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
 
 function liveSearch() {
   // Locate all comic elements
@@ -21,5 +21,3 @@ function liveSearch() {
     }
   }
 }
-
-//Referenced From https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/

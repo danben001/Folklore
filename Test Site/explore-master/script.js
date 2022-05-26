@@ -1,6 +1,6 @@
 // Interactive Digital Media
 // Daniel Benhamou – 3011151 – danielb009@hotmail.com
-// Parallax script referenced from Dev Ed https://github.com/developedbyed/explore
+// Parallax script referenced from Dev Ed, published on on Apr 16, 2021 https://github.com/developedbyed/explore
 
 //ScrollMagic is a library which allows for scripts to be triggered when scrolling.
 let controller = new ScrollMagic.Controller();

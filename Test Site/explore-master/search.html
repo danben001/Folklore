@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Folklore</title>
+  <title>Scéalta</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./style.css" />
@@ -21,8 +21,10 @@
     <div class="content">
       <nav>
         <a href="index.html">
-          <h2 class="main-title">Folklore</h2>
+          <h2 class="main-title">Scéalta</h2>
         </a>
+        <a class="button" href="index.html">Home</a>
+        <a class="button" href="find.html">Find Folklore</a>
         <a class="button">What is Folklore?</a>
       </nav>
       </br>
@@ -32,37 +34,42 @@
         <div>
           <section class="container">
             <form>
+              <!--When inputting text, call the function "liveSearch()"-->
               <input type="text" name="" id="search-item" placeholder="Search Comics" oninput="liveSearch()">
             </form>
 
-            <div class="comicSearch">
+            <div class="comic-list">
               <a href="comic1.html"><img src="icons/Labhraidh.png" alt="Labhraidh Loingseach"></a>
+              <!--Tags for search terms-->
               <span class="is-hidden">Labhraidh Loingseach</span>
               <span class="is-hidden">Horse Ears</span>
             </div>
 
-            <div class="comicSearch">
+            <div class="comic-list">
               <img src="icons/Deirdre.png" alt="Deirdre of the Sorrows">
+              <!--Tag for search terms-->
               <span class="is-hidden">Deirdre of the Sorrows</span>
             </div>
 
-            <div class="comicSearch">
+            <div class="comic-list">
               <img src="icons/Fairies.png" alt="Fairies">
+              <!--Tag for search term-->
               <span class="is-hidden">Fairies</span>
             </div>
 
-            <div class="comicSearch">
+            <div class="comic-list">
               <img src="icons/Beansidhe.png" alt="Beansidhe">
+              <!--Tags for search terms-->
               <span class="is-hidden">Beansidhe</span>
               <span class="is-hidden">Banshee</span>
             </div>
 
-            <div class="comicSearch">
+            <div class="comic-list">
               <img src="icons/Samhain.png" alt="Samhain">
+              <!--Tags for search terms-->
               <span class="is-hidden">Samhain</span>
               <span class="is-hidden">Halloween</span>
             </div>
-
           </section>
         </div>
       </div>

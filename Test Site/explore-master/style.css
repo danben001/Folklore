@@ -1,3 +1,8 @@
+/*Interactive Digital Media*/
+/*Daniel Benhamou – 3011151 – danielb009@hotmail.com*/
+/*Some CSS referenced from Carlos Avila, published June 27th 2018 https://codepen.io/cb2307/pen/XYxyeY*/
+/*Some CSS referenced From Hilman Ramadhan, published on Oct 26, 2021 https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript*/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +11,26 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*Add font*/
 @font-face {
   font-family: 'irish_pennyregular';
   src: url('font/irishpenny-webfont.woff2') format('woff2'),
-       url('font/irishpenny-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    url('font/irishpenny-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+/*Background gradient colour*/
 body {
-  background-image: linear-gradient(to bottom,rgb(24, 30, 40),rgb(60, 80, 40));
+  background-image: linear-gradient(to bottom, rgb(24, 30, 40), rgb(60, 80, 40));
 }
 
+/*No gradient on background for "Home" page*/
 body.index {
   background: rgb(50, 30, 24);
 }
 
+/*Navbar styling*/
 nav {
   width: 100%;
   display: flex;
@@ -32,135 +40,55 @@ nav {
   padding-right: 40rem;
 }
 
+/*Navbar text styling*/
 nav a {
   padding: 3rem 5rem;
   font-size: 1.9rem;
 }
 
-.front {
+/*Navbar styling for "Home" page*/
+.index-nav {
   width: 100%;
   display: flex;
-  padding: 3rem 10rem;
+  padding: 3rem 5rem;
   justify-content: space-between;
   align-items: center;
-  padding-right: 500px;
-  padding-left: 500px;
+  padding-right: 20rem;
+  padding-left: 20rem;
 }
 
-.front a {
+/*Navbar text styling for "Home" page*/
+.index-nav a {
   padding: 3rem 5rem;
   font-size: 2.9rem;
 }
 
+/*Remove underline from links*/
 a:link {
   text-decoration: none;
 }
 
+/*Change link colour on hover*/
 a:hover {
-  color: rgb(70, 130, 60);;
+  color: rgb(70, 130, 60);
 }
 
+/*Container styling*/
 .container {
   height: 100vh;
-}
-
-.container img {
-  width: 100%;
-  position: absolute;
-  height: 110vh;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.container img {
-  width: 100%;
-  position: absolute;
-  height: 110vh;
-}
-
-h2.main-title-home {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  font-size: 8rem;
-  transform: translate(-50%, -30%);
-  font-family: "irish_pennyregular";
-}
-
-h2.main-title {
-  font-size: 4rem;
-  font-family: "irish_pennyregular";
-}
-
-.scroll-down {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  font-size: 2rem;
-  transform: translate(-50%, -30%);
-}
-
-.content {
-  width: 100%;
-  background: linear-gradient(to bottom,rgb(24, 30, 40),rgb(60, 80, 40));
-  min-height: 100vh;
-  z-index: 2;
-  position: absolute;
-}
-
-.content-images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  text-align: center;
-}
-
-.content-front {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
-
-.thumbnails {
-  width: 25%;
-}
-
-.text {
-  padding: 2rem 20rem;
-  font-size: 1.5rem;
-}
-
-.comicText {
-  align-items: center;
-  font-size: 1.1rem;
-}
-
-.button {}
-
-.secondary-header {
-  text-align: center;
-  font-size: 4rem;
-  transform: translate(0%, -70%);
-}
-
-.comic {
-  align-items: center;
-}
-
-.container {
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 2rem;
 }
 
+/*form styling*/
 .container form {
   flex-direction: row;
 }
 
+/*Container form input styling*/
 .container form input {
   transform: translate(-20%);
   width: 170%;
@@ -172,13 +100,131 @@ h2.main-title {
   color: black;
 }
 
-.comicSearch {
+/*Container image styling*/
+/*the "z-index -1" ensures the text displays in front of the parallax images on the "Home" page*/
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*adjust page height only for the "Search" page*/
+.content-comic .container {
+  height: 190vh;
+  z-index: +1;
+}
+
+/*the "z-index -1" on the overall container class styling which ensures the text displays in front of the parallax images on the
+ "Home" page causes links on the "Search" page to not work. This fixes that*/
+.content-comic .container img {
+  z-index: +1;
+}
+
+/*"Home" page heading 1 styling*/
+h1.main-title-home {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 8rem;
+  transform: translate(-50%, -30%);
+  font-family: "irish_pennyregular";
+}
+
+/*Heading 2 for title of website on navbar styling*/
+h2.main-title {
+  font-size: 4rem;
+  font-family: "irish_pennyregular";
+}
+
+/*Text on "Home" page "Scroll down to see more" styling*/
+.scroll-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -30%);
+}
+
+/*Content styling*/
+.content {
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(24, 30, 40), rgb(60, 80, 40));
+  min-height: 100vh;
+  z-index: 2;
+  position: absolute;
+}
+
+/*Content images styling*/
+.content-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  text-align: center;
+}
+
+/*"Home" page content styling*/
+.content-index {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+/*Comic thumbnail styling*/
+.thumbnails {
+  width: 25%;
+}
+
+/*General text styling, for example used on "What is Folklore?" page*/
+.text {
+  padding: 2rem 20rem;
+  font-size: 1.5rem;
+}
+
+/*Text used on motion comic page*/
+.comic-text {
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+/*Secondary headings on pages styling*/
+.secondary-header {
+  text-align: center;
+  font-size: 4rem;
+  transform: translate(0%, -70%);
+}
+
+/*Search button icon styling*/
+.search img {
+  width: 2%;
+  height: 2%;
+  float: left;
+}
+
+/*Search button text styling*/
+.search h2 {
+  float: left;
+  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+
+/*Motion comic iframe styling*/
+.comic {
+  align-items: center;
+}
+
+/*Comic search list styling*/
+.comic-list {
   display: flex;
   padding: 13rem;
   cursor: pointer;
 }
 
-.comicSearch img {
+/*Comic search list images styling*/
+.comic-list img {
   width: 25%;
   height: 25%;
   object-fit: cover;
@@ -190,20 +236,24 @@ h2.main-title {
   max-height: 25rem;
 }
 
+/*"Find Folklore" page categories styling*/
 .category-container {
   padding: 50px;
 }
 
+/*"Find Folklore" page grid styling*/
 .box {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(6, minmax(100px, 1fr));
 }
 
+/*"Find Folklore" page grid links styling*/
 .box a {
   transition: transform .3s;
 }
 
+/*"Find Folklore" page grid thumbnails expanding on hover styling*/
 .box a:hover {
   transition: transform .3s;
   -ms-transform: scale(1.4);
@@ -211,222 +261,28 @@ h2.main-title {
   transform: scale(1.4);
 }
 
+/*"Find Folklore" page thumbnails styling*/
 .box img {
   border-radius: 10px;
   width: 100%;
 }
 
+/*"Find Folklore" page category title styling*/
 .category-title {
   text-align: left;
   padding: 2rem 1rem;
+  padding-top: 6rem;
   font-size: 2rem;
 }
 
+/*"Find Folklore" page category title styling*/
 .search-title {
   text-align: left;
   padding: 2rem 1rem;
   font-size: 3rem;
 }
 
+/*On the "Search" page, this class is added to individual comics that do not match the current search query so that comics not relevant to the search are hidden*/
 .is-hidden {
   display: none;
-}
-
-@media only screen and (max-width: 390px) {
-  nav {
-    width: 100%;
-    display: contents;
-    padding-top: 2rem;
-  }
-
-  nav a {
-    padding: 2rem 4rem;
-    font-size: 1rem;
-  }
-
-  .front {
-    display: flex;
-    padding: 3rem;
-    transform: translate(-17%, 0);
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .front a {
-    padding: 1rem 3.5rem;
-    font-size: 1.5rem;
-  }
-
-  .secondary-header {
-    text-align: center;
-    padding: 1rem 1rem;
-    font-size: 2rem;
-    transform: translate(0%, -70%);
-  }
-
-  .container img {
-    width: 100%;
-    position: absolute;
-    height: 110vh;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  .container img {
-    width: 100%;
-    position: absolute;
-    height: 110vh;
-  }
-
-  .main-title-home {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    font-size: 6rem;
-    transform: translate(-50%, -30%);
-  }
-
-  .main-title {
-    font-size: 3rem;
-    padding-left: 6rem;
-  }
-
-  .scroll-down {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    font-size: 2rem;
-    transform: translate(-50%, -30%);
-  }
-
-  .content {
-    width: 100%;
-    background: rgb(24, 24, 24);
-    min-height: 100vh;
-    z-index: 2;
-    position: absolute;
-  }
-
-  .content-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    text-align: center;
-  }
-
-  .content-front {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-  }
-
-  .thumbnails {
-    width: 55%;
-  }
-
-  .text {
-    padding: 2rem 2rem;
-    font-size: 1.5rem;
-  }
-
-  .comicText {
-    align-items: center;
-    font-size: 1.1rem;
-  }
-
-  .button {}
-
-  .secondary-header {
-    text-align: center;
-    padding: 1rem 1rem;
-    font-size: 2rem;
-    transform: translate(0%, -70%);
-  }
-
-  .comic {
-    align-items: center;
-  }
-
-  .container {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .container form {
-    flex-direction: row;
-  }
-
-  .container form input {
-    transform: translate(5%);
-    width: 90%;
-    height: 20%;
-    font-size: 1rem;
-    border-radius: 1rem;
-    font-weight: 600;
-    padding: 20px 10px;
-    color: black;
-  }
-
-  .comicSearch {
-    display: flex;
-    padding: 6rem;
-    cursor: pointer;
-  }
-
-  .comicSearch img {
-    width: 25%;
-    height: 25%;
-    object-fit: cover;
-    border-radius: 1rem;
-    transform: translate(-50%, -40%);
-    min-width: 15rem;
-    min-height: 10rem;
-    max-width: 15rem;
-    max-height: 10rem;
-  }
-
-  .category-container {
-    padding: 50px;
-  }
-
-  .box {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
-    align-items: center;
-  }
-
-  .box a {
-    transition: transform .3s;
-  }
-
-  .box a:hover {
-    transition: transform .3s;
-    -ms-transform: scale(1.4);
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-
-  .box img {
-    border-radius: 10px;
-    width: 100%;
-    align-items: center;
-  }
-
-  .category-title {
-    text-align: center;
-    padding: 1rem 1rem;
-    font-size: 2rem;
-  }
-
-  .search-title {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 2rem;
-  }
 }
