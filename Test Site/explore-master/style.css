@@ -27,7 +27,7 @@ body {
 
 /*No gradient on background for "Home" page*/
 body.index {
-  background: rgb(50, 30, 24);
+  background: rgb(24, 30, 40);
 }
 
 /*Navbar styling*/
