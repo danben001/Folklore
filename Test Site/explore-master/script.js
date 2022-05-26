@@ -16,8 +16,8 @@ timeline
   .to('.bg2', 3, {
     y: -200
   }, "-=3")
-  .fromTo('.bg1', 3, {
-    y: -10
+  .fromTo('.bg1', 2, {
+    y: -20
   }, {
     y: 0,
     duration: 3
