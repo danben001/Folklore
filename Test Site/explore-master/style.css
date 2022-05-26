@@ -6,8 +6,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+@font-face {
+  font-family: 'irish_pennyregular';
+  src: url('font/irishpenny-webfont.woff2') format('woff2'),
+       url('font/irishpenny-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-  background-color: rgb(24, 24, 24);
+  background-image: linear-gradient(to bottom,rgb(26, 30, 24),rgb(60, 80, 40));
 }
 
 nav {
@@ -16,7 +25,7 @@ nav {
   padding-top: 2rem;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1200px;
+  padding-right: 40rem;
 }
 
 nav a {
@@ -44,7 +53,7 @@ a:link {
 }
 
 a:hover {
-  color: green;
+  color: rgb(70, 130, 60);;
 }
 
 .container {
@@ -65,16 +74,18 @@ a:hover {
   height: 110vh;
 }
 
-.main-title-home {
+h2.main-title-home {
   position: absolute;
   top: 30%;
   left: 50%;
   font-size: 6rem;
   transform: translate(-50%, -30%);
+  font-family: "irish_pennyregular";
 }
 
-.main-title {
+h2.main-title {
   font-size: 4rem;
+  font-family: "irish_pennyregular";
 }
 
 .scroll-down {
@@ -87,7 +98,7 @@ a:hover {
 
 .content {
   width: 100%;
-  background: rgb(24, 24, 24);
+  background: linear-gradient(to bottom,rgb(26, 30, 24),rgb(60, 80, 40));
   min-height: 100vh;
   z-index: 2;
   position: absolute;
@@ -126,7 +137,6 @@ a:hover {
 
 .secondary-header {
   text-align: center;
-  padding: 1rem 1rem;
   font-size: 4rem;
   transform: translate(0%, -70%);
 }
