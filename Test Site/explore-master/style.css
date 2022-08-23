@@ -31,13 +31,22 @@ body.index {
 }
 
 /*Navbar styling*/
-nav {
+nav.comic {
   width: 100%;
   display: flex;
   padding-top: 2rem;
   justify-content: space-between;
   align-items: center;
   padding-right: 20rem;
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40rem;
 }
 
 /*Navbar text styling*/
